@@ -4,6 +4,7 @@ import About from "./About.jsx";
 import Contact from "./Contact.jsx";
 import Services from "./services.jsx";
 import { useState } from "react";
+import Dashboard from "./Dashboard.jsx";
 
 // Detecta si estás en desarrollo o producción
 const basename = import.meta.env.DEV ? "/" : "/app-react/";
@@ -33,6 +34,7 @@ function Menu() {
       <Link to="/about" style={{ marginRight: "1em" }}>About</Link>
       <Link to="/services" style={{ marginRight: "1em" }}>Services</Link>
       <Link to="/contact" style={{ marginRight: "1em" }}>Contact</Link>
+      <Link to="/dashboard" style={{ marginRight: "1em" }}>Dashboard</Link>
     </nav>
   );
 }
@@ -58,6 +60,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );
