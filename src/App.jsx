@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home.jsx";
 import About from "./About.jsx";
-import Contacto from "./Contacto.jsx";
+import Contact from "./Contact.jsx";
+import Services from "./services.jsx";
 import { useState } from "react";
 
 // Detecta si estás en desarrollo o producción
@@ -43,7 +44,8 @@ function App() {
           }
         />
         <Route path="/about" element={<About />} />
-        <Route path="/contacto" element={<Contacto />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,4 +1,4 @@
-function Contacto() {
+function Services() {
   return (
     <div className="App">
       <div className="Centrado">
@@ -8,4 +8,4 @@ function Contacto() {
     </div>
   );
 }
-export default Contacto;
+export default Services;
