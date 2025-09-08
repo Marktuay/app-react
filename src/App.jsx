@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./Home.jsx";
 import About from "./About.jsx";
 import Contact from "./Contact.jsx";
@@ -26,9 +26,21 @@ function NombreComponente() {
   );
 }
 
+function Menu() {
+  return (
+    <nav style={{ marginBottom: "2em" }}>
+      <Link to="/" style={{ marginRight: "1em" }}>Home</Link>
+      <Link to="/about" style={{ marginRight: "1em" }}>About</Link>
+      <Link to="/services" style={{ marginRight: "1em" }}>Services</Link>
+      <Link to="/contact" style={{ marginRight: "1em" }}>Contact</Link>
+    </nav>
+  );
+}
+
 function App() {
   return (
     <BrowserRouter basename={basename}>
+      <Menu />
       <Routes>
         <Route
           path="/"
@@ -44,8 +56,8 @@ function App() {
           }
         />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
